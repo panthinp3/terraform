@@ -1,18 +1,34 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.24"
-    }
-  }
+
+/*
+module "ec2"{
+
+  source = "../modules/ec2"
+
+  pub_subnet_id= module.vpc.public_subnet
+  pub_sec_grp= module.sec_grp.public_sec_grp
+
+  pri_subnet_id= module.vpc.private_subnet
+  pri_sec_grp= module.sec_grp.private_sec_grp
 }
 
-module "new_module"{
-  source = "../modules/module1"
-  select_region=var.region
-  access_key=var.access_key
-  secret_key=var.secret_key
+module "sec_grp"{
+  source = "../modules/sec_grp"
+  vpc_id=module.vpc.vpc_id
+  
 }
+i
+module "vpc"{
+  source = "../modules/vpc"
+  
+}
+*/
+
+module "iam_user"{
+  source = "../modules/iam_user"
+  
+}
+
+
 
 
 

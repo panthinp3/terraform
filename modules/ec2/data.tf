@@ -1,24 +1,5 @@
 
 
-data "aws_vpc" "vpc"{
-    filter{
-      name="vpc-id"
-      values=["vpc*"]
-    }
-  }
-
-  data "aws_security_group" "sg"{
-    filter{
-      name="tag:Name"
-      values=["web1"]
-    }
-
-    filter{
-      name="vpc-id"
-      values=[data.aws_vpc.vpc.id,]
-    }
-  }
-
 data "aws_ami" "create_ami"{
   most_recent = true
   filter{
@@ -43,3 +24,22 @@ data "aws_ami" "create_ami"{
 
   owners = [ "amazon" ]
 }
+
+data "aws_vpc" "vpc"{
+    filter{
+      name="vpc-id"
+      values=["vpc*"]
+    }
+  }
+/*
+  data "aws_security_group" "sg"{
+    filter{
+      name="tag:Name"
+      values=["web1"]
+    }
+
+    filter{
+      name="vpc-id"
+      values=[data.aws_vpc.vpc.id,]
+    }
+  }*/
