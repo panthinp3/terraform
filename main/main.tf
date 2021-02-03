@@ -21,10 +21,16 @@ module "vpc"{
   source = "../modules/vpc"
   
 }
-*/
+
 
 module "iam_user"{
   source = "../modules/iam_user"
+  
+}
+*/
+
+module "s3_bucket"{
+  source = "../modules/s3_bucket"
   
 }
 
