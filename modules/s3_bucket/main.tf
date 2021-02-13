@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "my_bucket" {
   }
   versioning {
     enabled = false
-  }
+  } 
   website {
     index_document = "index.html"
     error_document = "error.html"
