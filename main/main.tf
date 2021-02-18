@@ -10,19 +10,19 @@ module "ec2"{
   pri_subnet_id= module.vpc.private_subnet
   pri_sec_grp= module.sec_grp.private_sec_grp
 }
-/*
+
 module "sec_grp"{
   source = "../modules/sec_grp"
   vpc_id=module.vpc.vpc_id
   
 }
-i
+
 module "vpc"{
   source = "../modules/vpc"
   
 }
 
-
+/*
 module "iam_user"{
   source = "../modules/iam_user"
   
