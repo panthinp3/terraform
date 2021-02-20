@@ -32,7 +32,7 @@ pipeline {
             }
         }
         
-        
+         /*
         stage('apply') {
             
             steps {
@@ -44,7 +44,7 @@ pipeline {
             }
         }
 
-        /*
+       
         stage('destroy') {
             
             steps {
