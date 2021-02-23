@@ -1,2 +1,2 @@
-@Library(dev-shared-lib)_
+@Library('dev-shared-lib') _
 terraform_lib()
